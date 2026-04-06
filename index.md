@@ -11,7 +11,7 @@ After basic installation of both machines I configured ssh service and changed d
 
 ![Branching](https://raw.githubusercontent.com/Aleksander9191/SecurityProjects/43bee26df1e142090b56fc73995b468c7f772369/ssh%20config.png)
 
-rule with port didn't apply as **ssh.socket** was running and ignoring my  `sshd_config` change so it had to be turned off
+rule with port didn't apply as `ssh.socket` was running and ignoring my  `sshd_config` change so it had to be turned off
 
 ![Branching](https://raw.githubusercontent.com/Aleksander9191/SecurityProjects/a71c6cf55f24638f194ada5c4af59c4952bedec2/ssh%20socket.png)
 
@@ -25,10 +25,10 @@ sudo ufw enable
 ```
 blocking all incoming traffic and allowing ssh on custonm port
 
-next, installation **fail2ban** on a server and its basic configutation
+next, installation `fail2ban` on a server and its basic configutation
 
 
-**fail2ban**  is a security tool that monitors system logs for suspicious activity, such as repeated failed login attempts. When it detects such behavior, it automatically blocks the offending IP address using firewall rules for a specified period
+`fail2ban`  is a security tool that monitors system logs for suspicious activity, such as repeated failed login attempts. When it detects such behavior, it automatically blocks the offending IP address using firewall rules for a specified period
 
 ![Branching](https://raw.githubusercontent.com/Aleksander9191/SecurityProjects/468818efd4ff42980b495a2af8fc299bf935aab7/jDDOCJD.png)
 
