@@ -51,9 +51,12 @@ tail -f /var/log/auth.log
 
 
 
-Kali ip was added to banned ip list in fail2ban status:
+Failed Hydra attack:
 
 ![Branching](https://raw.githubusercontent.com/Aleksander9191/SecurityProjects/2b840aaa2f1b281924364fff90e66bee0f6730ec/jail1.png)
+
+
+Kali ip was added to banned ip list in fail2ban status:
 
 ![Branching](https://raw.githubusercontent.com/Aleksander9191/SecurityProjects/2b840aaa2f1b281924364fff90e66bee0f6730ec/jail2.png)
 
