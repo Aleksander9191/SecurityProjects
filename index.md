@@ -37,7 +37,7 @@ next, installation **fail2ban** on a server and its basic configutation
 Then I had to configure network on both machines -  Host-only on both so they comunicate only between each other
 
 
-After succesful ping between devices I send an attack from Kali
+After succesful ping between devices I sent an attack from Kali
 ```Bash
 hydra -l admin1 -P /usr/share/wordlists/rockyou.txt ssh://192.168.56.108 -s 2222
 ```
@@ -47,7 +47,10 @@ tail -f /var/log/auth.log
 ```
 ![Branching](https://github.com/Aleksander9191/SecurityProjects/blob/468818efd4ff42980b495a2af8fc299bf935aab7/atak.png)
 
+
+
 Kali ip was added to banned ip list in fail2ban status:
+
 ![Branching](https://github.com/Aleksander9191/SecurityProjects/blob/a906d5fc5db1a1bbf1a0b0a875435c76bd54bb0d/fail2ban%20jail%20ip.png)
 
 
@@ -56,12 +59,12 @@ In the end I used grep to get clear display of attempts from logs
 grep "Failed password" /var/log/auth.log | awk '{print $11}' | sort | uniq -c
 
 ```
-this variation show number of attempted logins and its ports
+this variation shows number of attempted logins and its ports (in this case we had 2 attemps on every shown port)
 
 ```Bash
 grep "Failed password" /var/log/auth.log | awk '{print $9}' | sort | uniq -c
 ```
-this one number of attempts from a specific IP
+this on the other hand shows number of attempts from a specific IP 
 
 ![Branching](https://github.com/Aleksander9191/SecurityProjects/blob/404a5359aa953f7ef4e3be1ae1fd9f9b97a00aa1/grep.png)
 
@@ -71,9 +74,4 @@ As it is my first ever experience with publish my lab practices its a bit clunky
 
 
 
-Long, single-line code blocks should not wrap. They should horizontally scroll if they are too long. This line should be long enough to demonstrate this.
-```
 
-```
-The final element.
-```
