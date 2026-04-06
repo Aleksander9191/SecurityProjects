@@ -36,14 +36,14 @@ next, installation `fail2ban` on a server and its basic configutation
 
 `bantime` - ban duration in seconds
 
-Then I had to configure network on both machines -  Host-only on both so they comunicate only between each other
+Then I had to configure network on both machines -  **Host-only** on both so they comunicate only between each other
 
 
 After succesful ping between devices I sent an attack from Kali
 ```Bash
 hydra -l admin1 -P /usr/share/wordlists/rockyou.txt ssh://192.168.56.108 -s 2222
 ```
-As fail2ban was active I could display failed login attempts real time from logs
+As `fail2ban` was active I could display failed login attempts real time from logs
 ```Bash
 tail -f /var/log/auth.log
 ```
