@@ -62,7 +62,7 @@ Kali ip was added to banned ip list in fail2ban status:
 
 
 
-In the end I used grep to get clear display of attempts from logs
+In the end I used `grep` to get clear display of attempts from logs
 ```Bash
 grep "Failed password" /var/log/auth.log | awk '{print $11}' | sort | uniq -c
 
