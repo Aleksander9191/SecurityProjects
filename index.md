@@ -24,7 +24,9 @@ sudo ufw enable
 blocking all incoming traffic and allowing ssh on custonm port
 
 next, installation **fail2ban** on a server and its basic configutation
-fail2ban  is a security tool that monitors system logs for suspicious activity, such as repeated failed login attempts. When it detects such behavior, it automatically blocks the offending IP address using firewall rules for a specified period
+
+
+**fail2ban**  is a security tool that monitors system logs for suspicious activity, such as repeated failed login attempts. When it detects such behavior, it automatically blocks the offending IP address using firewall rules for a specified period
 
 ![Branching](https://github.com/Aleksander9191/SecurityProjects/blob/468818efd4ff42980b495a2af8fc299bf935aab7/jDDOCJD.png)
 `maxretry` - allowed password attempts
