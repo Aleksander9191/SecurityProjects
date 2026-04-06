@@ -13,7 +13,7 @@ After basic installation of both machines I configured ssh service and changed d
 
 rule with port didn't apply as **ssh.socket** was running and ignoring my  `sshd_config` change so it had to be turned off
 
-![Branching](https:/raw.githubusercontent.com/Aleksander9191/SecurityProjects/96fe42f27e7753f724e3c81db6ee53f980b00ba5/ssh%20socket.png)
+![Branching](https://raw.githubusercontent.com/Aleksander9191/SecurityProjects/96fe42f27e7753f724e3c81db6ee53f980b00ba5/ssh%20socket.png)
 
 Then, it was time for firewall installation:
 ```Bash
