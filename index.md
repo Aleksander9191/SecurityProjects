@@ -9,11 +9,11 @@ I used ubuntu server on Virtualbox as a target, and Kali linux also on Virtualbo
 
 After basic installation of both machines I configured ssh service and changed default port to `2222`
 
-![Branching](https://raw.githubusercontent.com/Aleksander9191/SecurityProjects/43bee26df1e142090b56fc73995b468c7f772369/ssh%20config.png)
+![Branching](https://raw.githubusercontent.com/Aleksander9191/SecurityProjects/2b840aaa2f1b281924364fff90e66bee0f6730ec/ssh%20config2.png)
 
 rule with port didn't apply as `ssh.socket` was running and ignoring my  `sshd_config` change so it had to be turned off
 
-![Branching](https://raw.githubusercontent.com/Aleksander9191/SecurityProjects/a71c6cf55f24638f194ada5c4af59c4952bedec2/ssh%20socket.png)
+![Branching](https://raw.githubusercontent.com/Aleksander9191/SecurityProjects/2b840aaa2f1b281924364fff90e66bee0f6730ec/ssh-socket2.png)
 
 Then, it was time for firewall installation:
 ```Bash
@@ -47,13 +47,16 @@ As `fail2ban` was active I could display failed login attempts real time from lo
 ```Bash
 tail -f /var/log/auth.log
 ```
-![Branching](https://raw.githubusercontent.com/Aleksander9191/SecurityProjects/468818efd4ff42980b495a2af8fc299bf935aab7/atak.png)
+![Branching](https://raw.githubusercontent.com/Aleksander9191/SecurityProjects/2b840aaa2f1b281924364fff90e66bee0f6730ec/atak2.png)
 
 
 
 Kali ip was added to banned ip list in fail2ban status:
 
-![Branching](https://raw.githubusercontent.com/Aleksander9191/SecurityProjects/a906d5fc5db1a1bbf1a0b0a875435c76bd54bb0d/fail2ban%20jail%20ip.png)
+![Branching](https://raw.githubusercontent.com/Aleksander9191/SecurityProjects/2b840aaa2f1b281924364fff90e66bee0f6730ec/jail1.png)
+
+![Branching](https://raw.githubusercontent.com/Aleksander9191/SecurityProjects/2b840aaa2f1b281924364fff90e66bee0f6730ec/jail2.png)
+
 
 
 In the end I used grep to get clear display of attempts from logs
