@@ -77,7 +77,7 @@ this on the other hand shows number of attempts from a specific IP
 ![Branching](https://raw.githubusercontent.com/Aleksander9191/SecurityProjects/404a5359aa953f7ef4e3be1ae1fd9f9b97a00aa1/grep.png)
 
 
-As it is my first ever experience with publish my lab practices its a bit clunky, and basic - later on it will develop better fluency and "flow", gained from experience
+As it is my first ever experience with publishing my lab practices its a bit clunky, and basic - later on it will develop better fluency and "flow", gained from experience
 
 
 
