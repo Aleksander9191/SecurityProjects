@@ -1,5 +1,7 @@
 ---
 layout: default
+title: Linux Server Hardening
+permalink: /projects/ssh-hardening/
 ---
 # Linux Server Hardening & SSH Brute Force Simulation
 
