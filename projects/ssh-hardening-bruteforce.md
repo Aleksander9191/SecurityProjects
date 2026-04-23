@@ -1,5 +1,5 @@
 ---
-
+layout: default
 ---
 # Linux Server Hardening & SSH Brute Force Simulation
 
