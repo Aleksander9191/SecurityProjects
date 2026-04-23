@@ -9,11 +9,11 @@ I used ubuntu server on Virtualbox as a target, and Kali linux also on Virtualbo
 
 After basic installation of both machines I configured ssh service and changed default port to `2222`
 
-![SSH Config](../images/ssh_config2.png)
+![SSH Config](/SecurityProjects/images/ssh_config2.png)
 
 rule with port didn't apply as `ssh.socket` was running and ignoring my  `sshd_config` change so it had to be turned off
 
-![SSH socket](../images/ssh-socket2.png)
+![SSH socket](/SecurityProjects/images/ssh-socket2.png)
 
 Then, it was time for firewall installation:
 ```Bash
@@ -30,7 +30,7 @@ next, installation `fail2ban` on a server and its basic configutation
 
 `fail2ban`  is a security tool that monitors system logs for suspicious activity, such as repeated failed login attempts. When it detects such behavior, it automatically blocks the offending IP address using firewall rules for a specified period
 
-![fail2ban](../images/jDDOCJD.png)
+![fail2ban](/SecurityProjects/images/jDDOCJD.png)
 
 `maxretry` - allowed password attempts
 
@@ -47,18 +47,18 @@ As `fail2ban` was active I could display failed login attempts real time from lo
 ```Bash
 tail -f /var/log/auth.log
 ```
-![atak](../images/atak2.png)
+![atak](/SecurityProjects/images/atak2.png)
 
 
 
 Failed Hydra attack:
 
-![jail](../images/jail1.png)
+![jail](/SecurityProjects/images/jail1.png)
 
 
 Kali ip was added to banned ip list in fail2ban status:
 
-![jail2](../images/jail2.png)
+![jail2](/SecurityProjects/images/jail2.png)
 
 
 
