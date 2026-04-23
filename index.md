@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # 🛡️ Security Projects
 
 Collection of my cybersecurity and Linux administration labs.
