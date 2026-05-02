@@ -47,11 +47,11 @@ For the attack I installed `Kerbrute` on Kali
 
 Firstly, I used `userenum` command with basic users list(few correct and few incorrect) which only enumerates valid usernames, doesn't try to log-in;
 
-![hasła](/SecurityProjects/images/active-directory-lab/enum1.png)
-
 ```Bash
-
+./kerbrute userenum --dc 192.168.56.10 -d corp.local users.txt
 ```
+
+![hasła](/SecurityProjects/images/active-directory-lab/enum1.png)
 
 so in Event Viewer the only event generated should be `4768` - Kerberos Authentication Ticket (TGT) requested
 But there was none. I needed to dig a little to found that my Event Viewer didn't raport any events as Windows auditing was not enabled for Kerberos authentication events on the Domain Controller.
@@ -64,6 +64,10 @@ fast correction to that:
 ![hasła](/SecurityProjects/images/active-directory-lab/kerberos-kategorie-ustawione.png)
 
 I checked that by some password spraying:
+
+```Bash
+./kerbrute passwordspray --dc 192.168.56.10 -d corp.local users.txt 'Password123!'
+```
 
 ![hasła](/SecurityProjects/images/active-directory-lab/spray.png)
 
