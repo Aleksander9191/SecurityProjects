@@ -80,3 +80,29 @@ which worked correctly:
 now something to boost our logging system - `Sysmon` installation
 
 `Sysmon` is a  Windows system service and device driver  that provides detailed, high-granularity logging of system activity
+
+Installation process is simply one exe file with one markup so I wont bother you with that
+
+Afterwards it is time for some tests:
+
+`Get-Process` in powershell to list processes and trigger activity - worked
+
+![hasła](/SecurityProjects/images/active-directory-lab/simple-sysmon-test.png)
+
+
+now something more sophisticated:
+
+```
+Bash
+-nop -w hidden -c "whoami"
+```
+`-nop` - no profile
+`-w hidden` - hidden window
+`-c` - execute command at this case "whoami"
+
+![hasła](/SecurityProjects/images/active-directory-lab/whoami-w-event-viewer.png)
+
+but sysmon catched that
+
+
+
