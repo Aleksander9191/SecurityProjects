@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Enterprise Active Directory Cybersecurity Lab
-permalink: /projects/Enterprise-Active-Directory-lab.md
+permalink: /projects/Enterprise-Active-Directory-lab/
 ---
 # Enterprise Active Directory Cybersecurity Lab
 
