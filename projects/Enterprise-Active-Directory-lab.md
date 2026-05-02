@@ -15,4 +15,18 @@ lab focused on Windows Active Directory administration, security monitoring, att
 
 First thing to do after installation both machines and Active Directory on server was to promote it to domain controller
 
+![promote](SecurityProjects/images/active-directory-lab/promote to domain controller.png)
+named it corp.local
+
+then I created new Organizational Units, groups and users in them
+
+![ou](SecurityProjects/images/active-directory-lab/nowe OU.png)
+![grupy](SecurityProjects/images/active-directory-lab/nowe grupy.png)
+![usery](SecurityProjects/images/active-directory-lab/nowe usery.png)
+
+next it was time to edit Group and Lockout Policy 
+
+![hasła](SecurityProjects/images/active-directory-lab/gpo  hasła.png)
+![lockout](SecurityProjects/images/active-directory-lab/lockout policy.png)
+
 
