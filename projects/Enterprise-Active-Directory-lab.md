@@ -104,7 +104,7 @@ now something more sophisticated:
 
 ![hasła](/SecurityProjects/images/active-directory-lab/whoami-w-event-viewer.png)
 
-but sysmon catched that
+ sysmon catched that perfectly
 
 
 
