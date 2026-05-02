@@ -15,7 +15,7 @@ lab focused on Windows Active Directory administration, security monitoring, att
 
 First thing to do after installation both machines and Active Directory on server was to promote it to domain controller
 
-![promote](/images/active-directory-lab/promote-to-domain-controller.png)
+![promote](SecurityProjects/images/active-directory-lab/promote-to-domain-controller.png)
 named it corp.local
 
 then I created new Organizational Units, groups and users in them
