@@ -31,8 +31,8 @@ next it was time to edit Group and Lockout Policy
 
 next I activated audit `logon` and `powershell logs` and forced Group Policy update by `gpupdate /force` in CMD
 
-![hasła](/images/active-directory-lab/logi-z-logowania.png)
-![hasła](/images/active-directory-lab/powershell-logi.png)
+![hasła](/SecurityProjects/images/active-directory-lab/logi-z-logowania.png)
+![hasła](/SecurityProjects/images/active-directory-lab/powershell-logi.png)
 
 As workstation and domain controller was all set I did some basic attack simulation with monitoring in `Event Viewer`
 For the attack I installed `Kerbrute` on Kali
@@ -41,24 +41,24 @@ For the attack I installed `Kerbrute` on Kali
 
 Firstly, I used `userenum` command with basic users list(few correct and few incorrect) which only enumerates valid usernames, doesn't try to log-in;
 
-![hasła](/images/active-directory-lab/enum1.png)
+![hasła](/SecurityProjects/images/active-directory-lab/enum1.png)
 so in Event Viewer the only event generated shoould be 4768 - Kerberos Authentication Ticket (TGT) requested
 But there was none. I needed to dig a little to found that my Event Viewer didn't raport any events as Windows auditing was not enabled for Kerberos authentication events on the Domain Controller.
 
 
-![hasła](/images/active-directory-lab/brak-audytu.png)
+![hasła](/SecurityProjects/images/active-directory-lab/brak-audytu.png)
 fast correction to that:
 
-![hasła](/images/active-directory-lab/kerberos-kategorie-ustawione.png)
+![hasła](/SecurityProjects/images/active-directory-lab/kerberos-kategorie-ustawione.png)
 
 I checked that by some password spraying:
 
-![hasła](/images/active-directory-lab/spray.png)
+![hasła](/SecurityProjects/images/active-directory-lab/spray.png)
 
 which worked correctly:
 `4771` - kerberos pre-authentication failed
 
-![hasła](/images/active-directory-lab/audit-failure.png)
+![hasła](/SecurityProjects/images/active-directory-lab/audit-failure.png)
 
 now something to boost our logging system - `Sysmon` installation
 
