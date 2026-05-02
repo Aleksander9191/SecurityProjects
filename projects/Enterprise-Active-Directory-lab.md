@@ -20,14 +20,14 @@ named it corp.local
 
 then I created new Organizational Units, groups and users in them
 
-![ou](.../images/active-directory-lab/nowe-OU.png)
-![grupy](/images/active-directory-lab/nowe-grupy.png)
-![usery](/images/active-directory-lab/nowe-usery.png)
+![ou](/SecurityProjects/images/active-directory-lab/nowe-OU.png)
+![grupy](/SecurityProjects/images/active-directory-lab/nowe-grupy.png)
+![usery](/SecurityProjects/images/active-directory-lab/nowe-usery.png)
 
 next it was time to edit Group and Lockout Policy 
 
-![hasła](/images/active-directory-lab/gpo-hasła.png)
-![lockout](/images/active-directory-lab/lockout-policy.png)
+![hasła](/SecurityProjects/images/active-directory-lab/gpo-hasła.png)
+![lockout](/SecurityProjects/images/active-directory-lab/lockout-policy.png)
 
 next I activated audit `logon` and `powershell logs` and forced Group Policy update by `gpupdate /force` in CMD
 
