@@ -92,12 +92,14 @@ Afterwards it is time for some tests:
 
 now something more sophisticated:
 
-```
-Bash
+```Bash
 -nop -w hidden -c "whoami"
 ```
+
 `-nop` - no profile
+
 `-w hidden` - hidden window
+
 `-c` - execute command at this case "whoami"
 
 ![hasła](/SecurityProjects/images/active-directory-lab/whoami-w-event-viewer.png)
