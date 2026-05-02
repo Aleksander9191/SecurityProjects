@@ -20,7 +20,7 @@ named it corp.local
 
 then I created new Organizational Units, groups and users in them
 
-![ou](/images/active-directory-lab/nowe-OU.png)
+![ou](.../images/active-directory-lab/nowe-OU.png)
 ![grupy](/images/active-directory-lab/nowe-grupy.png)
 ![usery](/images/active-directory-lab/nowe-usery.png)
 
