@@ -16,6 +16,7 @@ lab focused on Windows Active Directory administration, security monitoring, att
 First thing to do after installation both machines and Active Directory on server was to promote it to domain controller
 
 ![promote](/SecurityProjects/images/promote-to-domain-controller.png)
+
 named it corp.local
 
 then I created new Organizational Units, groups and users in them
@@ -29,24 +30,35 @@ next it was time to edit Group and Lockout Policy
 ![hasła](/SecurityProjects/images/active-directory-lab/gpo-hasła.png)
 ![lockout](/SecurityProjects/images/active-directory-lab/lockout-policy.png)
 
-next I activated audit `logon` and `powershell logs` and forced Group Policy update by `gpupdate /force` in CMD
+next I activated audit `logon` and `powershell logs` and forced Group Policy update by 
+```Powershell
+gpupdate /force
+```
 
 ![hasła](/SecurityProjects/images/active-directory-lab/logi-z-logowania.png)
 ![hasła](/SecurityProjects/images/active-directory-lab/powershell-logi.png)
 
 As workstation and domain controller was all set I did some basic attack simulation with monitoring in `Event Viewer`
 For the attack I installed `Kerbrute` on Kali
+
 `Kerbrute` is a great tool for that as it bruteforce valid AD accounts through Kerberos Pre-Authentication. 
+
 `Kerberos` is an authentication protocol designed to verify user or host identities over insecure networks; **it's also native protocol in Active Directory**
 
 Firstly, I used `userenum` command with basic users list(few correct and few incorrect) which only enumerates valid usernames, doesn't try to log-in;
 
 ![hasła](/SecurityProjects/images/active-directory-lab/enum1.png)
-so in Event Viewer the only event generated shoould be 4768 - Kerberos Authentication Ticket (TGT) requested
+
+```Bash
+
+```
+
+so in Event Viewer the only event generated should be `4768` - Kerberos Authentication Ticket (TGT) requested
 But there was none. I needed to dig a little to found that my Event Viewer didn't raport any events as Windows auditing was not enabled for Kerberos authentication events on the Domain Controller.
 
 
 ![hasła](/SecurityProjects/images/active-directory-lab/brak-audytu.png)
+
 fast correction to that:
 
 ![hasła](/SecurityProjects/images/active-directory-lab/kerberos-kategorie-ustawione.png)
@@ -56,6 +68,7 @@ I checked that by some password spraying:
 ![hasła](/SecurityProjects/images/active-directory-lab/spray.png)
 
 which worked correctly:
+
 `4771` - kerberos pre-authentication failed
 
 ![hasła](/SecurityProjects/images/active-directory-lab/audit-failure.png)
