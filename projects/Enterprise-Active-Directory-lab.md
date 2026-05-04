@@ -38,6 +38,10 @@ gpupdate /force
 ![hasła](/SecurityProjects/images/active-directory-lab/logi-z-logowania.png)
 ![hasła](/SecurityProjects/images/active-directory-lab/powershell-logi.png)
 
+
+
+
+
 As workstation and domain controller was all set I did some basic attack simulation with monitoring in `Event Viewer`
 For the attack I installed `Kerbrute` on Kali
 
