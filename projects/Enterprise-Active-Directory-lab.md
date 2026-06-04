@@ -110,5 +110,17 @@ now something more sophisticated:
 
  sysmon catched that perfectly
 
+Then i thought about upgrading this home lab to look a bit more proffesional, so I began by configuring 2 more workstations and a file server and adding them to domain
+![smb](/SecurityProjects/images/active-directory-lab/smb_serwer_instal.png)
+
+![smb](/SecurityProjects/images/active-directory-lab/nowe-usery1.png)
+
+
+making it work took me a while but here the success:
+
+![smb](/SecurityProjects/images/active-directory-lab/file-server.png)
+
+I think I will wrap up this part here and come back to this point in next part to keep things short
+
 
 
