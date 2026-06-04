@@ -16,3 +16,12 @@ lab focused on Windows Active Directory administration, security monitoring, att
 * Virtualbox with internal network
 
 
+Starting where I left, we have domain with 3 workstations, domain controller and file server.
+
+To make thing begin to look like a somewhere real Security Operations Center I installed Wazuh on ubuntu server 
+
+After a few hours of unexpected error with network interface cards and Virtualbox overall I saw on my monitor what I wanted to see:
+
+![active](/SecurityProjects/images/Wazuh-and-Active-Directory-Lab/wazuh-active.png)
+
+
