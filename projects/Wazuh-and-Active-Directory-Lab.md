@@ -24,11 +24,12 @@ After a few hours of unexpected error with network interface cards and Virtualbo
 
 ![active](/SecurityProjects/images/Wazuh-and-Active-Directory-Lab/wazuh-active.png)
 
-![active](/SecurityProjectsimages/Wazuh-and-Active-Directory-Lab/wazuh-agenty3.png)
+![active](/SecurityProjects/images/images/Wazuh-and-Active-Directory-Lab/wazuh-agenty.png)
+
 
 Installing Wazuh agents turned out to be more complicated than I could have imagined as all my workstations messed up network cards somehow - it took a while to clean them up
 
-![active](/SecurityProjectsimages/Wazuh-and-Active-Directory-Lab/wazuh-agenty.png)
+![active](/SecurityProjects/images/Wazuh-and-Active-Directory-Lab/wazuh-agenty3.png)
 
 Then I also installed sysmon on them
 
