@@ -24,4 +24,13 @@ After a few hours of unexpected error with network interface cards and Virtualbo
 
 ![active](/SecurityProjects/images/Wazuh-and-Active-Directory-Lab/wazuh-active.png)
 
+![active](/SecurityProjectsimages/Wazuh-and-Active-Directory-Lab/wazuh-agenty3.png)
+
+Installing Wazuh agents turned out to be more complicated than I could have imagined as all my workstations messed up network cards somehow - it took a while to clean them up
+
+![active](/SecurityProjectsimages/Wazuh-and-Active-Directory-Lab/wazuh-agenty.png)
+
+Then I also installed sysmon on them
+
+sysmon - popular utility to monitor and deeply log system activity to the Windows Event Log
 
