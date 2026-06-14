@@ -24,14 +24,62 @@ After a few hours of unexpected error with network interface cards and Virtualbo
 
 ![active](/SecurityProjects/images/Wazuh-and-Active-Directory-Lab/wazuh-active.png)
 
-![active](/SecurityProjects/images/images/Wazuh-and-Active-Directory-Lab/wazuh-agenty.png)
+![active](/SecurityProjects/images/Wazuh-and-Active-Directory-Lab/wazuh-agenty.png)
 
 
 Installing Wazuh agents turned out to be more complicated than I could have imagined as all my workstations messed up network cards somehow - it took a while to clean them up
 
 ![active](/SecurityProjects/images/Wazuh-and-Active-Directory-Lab/wazuh-agenty3.png)
 
-Then I also installed sysmon on them
 
-sysmon - popular utility to monitor and deeply log system activity to the Windows Event Log
+Then I also installed `sysmon` on them
+
+`sysmon` - popular utility to monitor and deeply log system activity to the Windows Event Log
+
+Now I wanted to test logs collecting and took for example new user creation (EventID- 4720)
+Despite creating new users in the domain, no alerts related to account creation were appearing in Wazuh.
+Searching for Event ID 4720  returned no results.
+Additionally, checking the Windows Security log locally with:
+
+```powershell
+Get-WinEvent -FilterHashtable @{LogName='Security'; ID=4720} -MaxEvents 5 | Select TimeCreated,Id,Message
+```
+
+![active](/SecurityProjects/images/Wazuh-and-Active-Directory-Lab/4720-1.png)
+
+returned only old events - The first step was to verify that the Wazuh agent was correctly collecting Security log events:
+
+```xml
+<localfile>
+<location>Security</location>
+<log_format>eventchannel</log_format>
+</localfile>
+```
+it was on its place so I went further - Windows audit policy:
+
+```powershell
+auditpol /get /subcategory:"User Account Management"
+```
+bingo: No Auditing
+
+![active](/SecurityProjects/images/Wazuh-and-Active-Directory-Lab/auditpol.png)
+
+I enabled auditing for the User Account Management subcategory:
+
+![active](/SecurityProjects/images/Wazuh-and-Active-Directory-Lab/auditpol2.png)
+
+This time, a new Event ID 4720 entry appeared with today's date:
+
+![active](/SecurityProjects/images/Wazuh-and-Active-Directory-Lab/auditpol3.png)
+
+ and the event was successfully ingested by Wazuh and could be located using the following Threat Hunting query:
+
+ ```bash
+data.win.system.eventID:4720
+```
+![active](/SecurityProjects/images/Wazuh-and-Active-Directory-Lab/auditpol5.png)
+
+`rule.id 60109` - Account enabled or created
+
+
 
