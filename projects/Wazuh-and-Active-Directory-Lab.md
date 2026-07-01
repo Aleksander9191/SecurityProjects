@@ -88,6 +88,8 @@ I didn't have patience to document everything, but here is quick sum up:
 
 
 1. chat GPT gave me simple rule to detect `net user` usage in command line
+
+
 ```xml
 <rule id="100100" level="8">
 
@@ -111,6 +113,8 @@ I didn't have patience to document everything, but here is quick sum up:
 
 </rule>
 ```
+
+
 2. wazuh engine syntax validation of course went smoothly, no error after command:
 
 ![active](/SecurityProjects/images/Wazuh-and-Active-Directory-Lab/test_kompilacji_parsera.png)
@@ -120,6 +124,7 @@ I didn't have patience to document everything, but here is quick sum up:
 
 4. I verified event ingestion
    I confirmed that Wazuh Manager was receiving the events by inspecting archived events.
+   
    ```bash
    sudo grep -i "net.exe" /var/ossec/logs/archives/archives.json | tail -1
    ```
