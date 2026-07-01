@@ -144,11 +144,11 @@ finally after multiple more syntax attempts  I removed the example SSH rule incl
 
 ![active](/SecurityProjects/images/Wazuh-and-Active-Directory-Lab/basic2.png)
 
-----
+ <br>
+ 
+Guess what happened?
 
-### Guess what happened?
-
-
+<br>
 
 
 
