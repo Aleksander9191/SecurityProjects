@@ -87,7 +87,7 @@ Long story short: rule seemed to be okay, but didn't generate any alerts.
 I didn't have patience to document everything, but here is quick sum up:
 
 
-## chat GPT gave me simple rule to detect `net user` usage in command line
+I created simple rule to detect `net user` usage in command line
 
 
 ```xml
@@ -115,17 +115,17 @@ I didn't have patience to document everything, but here is quick sum up:
 ```
 
 
-## wazuh engine syntax validation of course went smoothly, no error after command:
+wazuh engine syntax validation of course went smoothly, no error after command:
 
 ![active](/SecurityProjects/images/Wazuh-and-Active-Directory-Lab/test_kompilacji_parsera.png)\
 
 
-## I checked in EventViewer if Sysmon events reached Wazuh
+I checked in EventViewer if Sysmon events reached Wazuh
 
    and of course they did
    
 
-## I verified event ingestion
+I verified event ingestion
 
    I confirmed that Wazuh Manager was receiving the events by inspecting archived events.
    
@@ -144,9 +144,9 @@ finally after multiple more syntax attempts  I removed the example SSH rule incl
 
 ![active](/SecurityProjects/images/Wazuh-and-Active-Directory-Lab/basic2.png)
 
+----
 
-
-Guess what happened?
+### Guess what happened?
 
 
 
