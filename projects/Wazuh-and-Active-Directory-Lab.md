@@ -81,5 +81,74 @@ data.win.system.eventID:4720
 
 `rule.id 60109` - Account enabled or created
 
+next I decided to create my own Wazuh rule... and it turned out into long troubleshooting.
+Long story short: rule seemed to be okay, but didn't generate any alerts.
+I didn't have patience to document everything, but here is quick sum up:
+
+
+1. chat GPT gave me simple rule to detect `net user` usage in command line
+```xml
+<rule id="100100" level="8">
+
+    <if_sid>92031</if_sid>
+
+    <field name="data.win.eventdata.commandLine" type="pcre2">
+        (?i).*net1?\s+user.*
+    </field>
+
+    <description>Possible Account Discovery using net user</description>
+
+    <mitre>
+        <id>T1087</id>
+    </mitre>
+
+    <group>
+        attack.discovery,
+        account_discovery,
+        custom_detection,
+    </group>
+
+</rule>
+```
+2. wazuh engine syntax validation of course went smoothly, no error after command:
+
+![active](/SecurityProjects/images/Wazuh-and-Active-Directory-Lab/test_kompilacji_parsera.png)
+
+3. I checked in EventViewer if Sysmon events reached Wazuh
+   and of course they did
+
+4. I verified event ingestion
+   I confirmed that Wazuh Manager was receiving the events by inspecting archived events.
+   ```bash
+   sudo grep -i "net.exe" /var/ossec/logs/archives/archives.json | tail -1
+   ```
+   
+![active](/SecurityProjects/images/Wazuh-and-Active-Directory-Lab/event_ingestion.png)
+
+
+5. then were few attempts to check if sid 92031 is correct in `/var/ossec/ruleset/rules` directory, it was
+
+6. finally after multiple more syntax attempts  I removed the example SSH rule included in `local_rules.xml.`
+
+![active](/SecurityProjects/images/Wazuh-and-Active-Directory-Lab/basic2.png)
+
+
+
+Guess what happened?
+
+
+
+
+
+![active](/SecurityProjects/images/Wazuh-and-Active-Directory-Lab/worked.png)
+
+IT WORKED
+
+
+So, it should not help, but it did. Maybe problem with XML formatting, maybe with something else, I dont know.
+
+For the future I will always keep local_rules.xml clean from  unused example rules before building custom detections.
+
+
 
 
