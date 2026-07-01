@@ -81,6 +81,7 @@ data.win.system.eventID:4720
 
 `rule.id 60109` - Account enabled or created
 
+
 next I decided to create my own Wazuh rule... and it turned out into long troubleshooting.
 Long story short: rule seemed to be okay, but didn't generate any alerts.
 I didn't have patience to document everything, but here is quick sum up:
@@ -148,6 +149,7 @@ IT WORKED
 So, it should not help, but it did. Maybe problem with XML formatting, maybe with something else, I dont know.
 
 For the future I will always keep local_rules.xml clean from  unused example rules before building custom detections.
+
 
 
 
