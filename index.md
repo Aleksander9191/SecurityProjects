@@ -15,7 +15,7 @@ Collection of my cybersecurity and  administration labs.
 
 ## 🛡️ Wazuh Detection Rules
 
-Custom Wazuh SIEM detection rules together with a complete debugging case study documenting the development and troubleshooting process.
+ Wazuh SIEM complete debugging case study documenting the development and troubleshooting process.
 
-- 📦 [Repository](https://github.com/Aleksander9191/Wazuh-detection-Rules)
+
 - 📖 [Technical Case Study](https://github.com/Aleksander9191/Wazuh-detection-Rules/blob/master/documents/debugging-custom-wazuh-rule.md)
