@@ -162,6 +162,13 @@ So, it should not help, but it did. Maybe problem with XML formatting, maybe wit
 
 For the future I will always keep local_rules.xml clean from  unused example rules before building custom detections.
 
+Moreover, the story didn't end here, as it turned out it was only a begining of a debugging story, complete is over here:
+
+[Technical Case Study](https://github.com/Aleksander9191/Wazuh-detection-Rules/blob/master/documents/debugging-custom-wazuh-rule.md)
+
+and in github issue:
+https://github.com/wazuh/wazuh/issues/37589
+
 
 
 
