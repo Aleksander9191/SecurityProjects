@@ -19,3 +19,4 @@ Detection engineering lab using Elastic Security, Sysmon and Atomic Red Team to 
   
 ## techniques:
 - [T1087.001 Local Account Discovery](https://github.com/Aleksander9191/Elastic-Detection-Lab/blob/main/techniques/T1087.001-Local-Account-Discovery/README.md)
+- ![T1059.001 – PowerShell Encoded Command Execution](https://github.com/Aleksander9191/Elastic-Detection-Lab/blob/main/techniques/T1059.001-PowerShell/README.md)
