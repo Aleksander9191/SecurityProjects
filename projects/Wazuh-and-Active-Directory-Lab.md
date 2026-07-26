@@ -167,7 +167,7 @@ Moreover, the story didn't end here, as it turned out it was only a begining of 
 [Technical Case Study](https://github.com/Aleksander9191/Wazuh-detection-Rules/blob/master/documents/debugging-custom-wazuh-rule.md)
 
 and in github issue:
-https://github.com/wazuh/wazuh/issues/37589
+[here](https://github.com/wazuh/wazuh/issues/37589)
 
 
 
