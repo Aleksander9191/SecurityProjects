@@ -20,3 +20,5 @@ Detection engineering lab using Elastic Security, Sysmon and Atomic Red Team to 
 ## techniques:
 - [T1087.001 Local Account Discovery](https://github.com/Aleksander9191/Elastic-Detection-Lab/blob/main/techniques/T1087.001-Local-Account-Discovery/README.md)
 - [T1059.001 – PowerShell Encoded Command Execution](https://github.com/Aleksander9191/Elastic-Detection-Lab/blob/main/techniques/T1059.001-PowerShell/README.md)
+- [T1110.001 - Password Guessing](https://github.com/Aleksander9191/Elastic-Detection-Lab/blob/main/techniques/T1110.001%20-%20Password%20Guessing/README.md)
+- [T1685.005 - Disable or Modify Tools: Clear Windows Event Logs](https://github.com/Aleksander9191/Elastic-Detection-Lab/blob/main/techniques/T1685.005%20-%20Disable%20or%20Modify%20Tools%3A%20Clear%20Windows%20Event%20Logs/README.md)
