@@ -26,3 +26,4 @@ Detection engineering lab using Elastic Security, Sysmon and Atomic Red Team to 
 - [T1218.010 - Regsvr32 Scriptlet Execution](https://github.com/Aleksander9191/Elastic-Detection-Lab/blob/main/techniques/T1218.010%20-%20Regsvr32%20Scriptlet%20Execution/README.md)
 - [T1027 - PowerShell Character Array Obfuscation](https://github.com/Aleksander9191/Elastic-Detection-Lab/blob/main/techniques/T1027%20-%20PowerShell%20Character%20Array%20Obfuscation/README.md)
 - [T1564.001 – Hide Artifacts: Hidden Files and Directories](https://github.com/Aleksander9191/Elastic-Detection-Lab/blob/main/techniques/T1564.001%20%E2%80%93%20Hide%20Artifacts%3A%20Hidden%20Files%20and%20Directories/README.md)
+- [T1053.005 - Scheduled Task](https://github.com/Aleksander9191/Elastic-Detection-Lab/blob/main/techniques/T1053.005%20-%20Scheduled%20Task/README.md)
