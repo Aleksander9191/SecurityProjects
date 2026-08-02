@@ -18,6 +18,9 @@ Detection engineering lab using Elastic Security, Sysmon and Atomic Red Team to 
 - [repository](https://github.com/Aleksander9191/Elastic-Detection-Lab)
   
 ## techniques:
+<details>
+ <summary><strong> Show implemented techniques (9)</strong></summary>
+  
 - [T1087.001 Local Account Discovery](https://github.com/Aleksander9191/Elastic-Detection-Lab/blob/main/techniques/T1087.001-Local-Account-Discovery/README.md)
 - [T1059.001 – PowerShell Encoded Command Execution](https://github.com/Aleksander9191/Elastic-Detection-Lab/blob/main/techniques/T1059.001-PowerShell/README.md)
 - [T1110.001 - Password Guessing](https://github.com/Aleksander9191/Elastic-Detection-Lab/blob/main/techniques/T1110.001%20-%20Password%20Guessing/README.md)
@@ -27,3 +30,5 @@ Detection engineering lab using Elastic Security, Sysmon and Atomic Red Team to 
 - [T1027 - PowerShell Character Array Obfuscation](https://github.com/Aleksander9191/Elastic-Detection-Lab/blob/main/techniques/T1027%20-%20PowerShell%20Character%20Array%20Obfuscation/README.md)
 - [T1564.001 – Hide Artifacts: Hidden Files and Directories](https://github.com/Aleksander9191/Elastic-Detection-Lab/blob/main/techniques/T1564.001%20%E2%80%93%20Hide%20Artifacts%3A%20Hidden%20Files%20and%20Directories/README.md)
 - [T1053.005 - Scheduled Task](https://github.com/Aleksander9191/Elastic-Detection-Lab/blob/main/techniques/T1053.005%20-%20Scheduled%20Task/README.md)
+
+- </details>
