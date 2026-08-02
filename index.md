@@ -24,3 +24,4 @@ Detection engineering lab using Elastic Security, Sysmon and Atomic Red Team to 
 - [T1685.005 - Disable or Modify Tools: Clear Windows Event Logs](https://github.com/Aleksander9191/Elastic-Detection-Lab/blob/main/techniques/T1685.005%20-%20Disable%20or%20Modify%20Tools%3A%20Clear%20Windows%20Event%20Logs/README.md)
 - [T1105 - Ingress Tool Transfer](https://github.com/Aleksander9191/Elastic-Detection-Lab/blob/main/techniques/T1105%20-%20Ingress%20Tool%20Transfer/README.md)
 - [T1218.010 - Regsvr32 Scriptlet Execution](https://github.com/Aleksander9191/Elastic-Detection-Lab/blob/main/techniques/T1218.010%20-%20Regsvr32%20Scriptlet%20Execution/README.md)
+- [T1027 - PowerShell Character Array Obfuscation](https://github.com/Aleksander9191/Elastic-Detection-Lab/blob/main/techniques/T1027%20-%20PowerShell%20Character%20Array%20Obfuscation/README.md)
