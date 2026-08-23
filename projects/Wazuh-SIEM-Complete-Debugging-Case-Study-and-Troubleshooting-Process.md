@@ -144,8 +144,8 @@ Validated the original Sysmon JSON event using wazuh-logtest. The decoder succes
 
 ![promote](/SecurityProjects/images/Wazuh-SIEM-Complete-Debugging/14.png)
 
- full logtest here: screenshots/netuser/14 wazuch-logtest.txt
- json added to logtest here: screenshots/netuser/14net-user.json.txt
+ 📄 [wazuh-logtest output](../images/Wazuh-SIEM-Complete-Debugging/14%20wazuch-logtest.txt)
+ - 📄 [Sysmon JSON event](../images/Wazuh-SIEM-Complete-Debugging/14net-user.json.txt)
 
 
 ## 15. Verifying built-in rule execution
