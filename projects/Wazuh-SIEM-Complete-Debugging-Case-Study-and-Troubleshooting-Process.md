@@ -235,7 +235,7 @@ tree "C:\Program Files (x86)\ossec-agent"
 
 dir "C:\Program Files (x86)\ossec-agent"
 ```
-![promote](/SecurityProjects/images/Wazuh-SIEM-Complete-Debugging/4.4.16.png)
+![promote](/SecurityProjects/images/Wazuh-SIEM-Complete-Debugging/4.14.6.png)
 
 ---
 
