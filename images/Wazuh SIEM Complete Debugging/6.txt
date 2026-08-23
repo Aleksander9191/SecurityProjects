@@ -1,0 +1,4 @@
+user1@wazuh:~/Wazuh-Detection-Pack$ grep "100101_net_user.xml" analysisd.log
+
+2026/07/05 16:13:36 wazuh-analysisd[82928] rules-config.c:371 at Read_Rules(): DEBUG: Adding rule: etc/rules/100101_net_user.xml
+2026/07/05 16:13:37 wazuh-analysisd[82928] rules.c:246 at Rules_OP_ReadRules(): DEBUG: etc/rules/100101_net_user.xml is the rulefile
