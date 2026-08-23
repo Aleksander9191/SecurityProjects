@@ -16,7 +16,7 @@ Technical walkthroughs and case studies documenting real lab implementations fro
 - [Linux Server Hardening & SSH Brute Force Simulation](projects/ssh-hardening-bruteforce.md)
 - [Enterprise Active Directory Cybersecurity Lab](/projects/Enterprise-Active-Directory-lab.md)
 - [Wazuh and Active Directory Lab](/projects/Wazuh-and-Active-Directory-Lab.md)
-- [Wazuh SIEM Complete Debugging Case Study and Troubleshooting Process](https://github.com/Aleksander9191/Wazuh-detection-Rules/blob/master/documents/debugging-custom-wazuh-rule.md)
+- [Wazuh SIEM Complete Debugging Case Study and Troubleshooting Process](projects/Wazuh-SIEM-Complete-Debugging-Case-Study-and-Troubleshooting-Process.md)
 
 ---
 
