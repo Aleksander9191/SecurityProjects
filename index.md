@@ -29,4 +29,5 @@ Detection engineering lab using Elastic Security, Sysmon and Atomic Red Team to 
 - [T1564.001 – Hide Artifacts: Hidden Files and Directories](https://github.com/Aleksander9191/Elastic-Detection-Lab/blob/main/techniques/T1564.001%20%E2%80%93%20Hide%20Artifacts%3A%20Hidden%20Files%20and%20Directories/README.md)
 - [T1053.005 - Scheduled Task](https://github.com/Aleksander9191/Elastic-Detection-Lab/blob/main/techniques/T1053.005%20-%20Scheduled%20Task/README.md)
 - [T1547.001 - Winlogon and Registry Run Key Persistence Detection](https://github.com/Aleksander9191/Elastic-Detection-Lab/blob/main/techniques/T1547.001%20-%20Winlogon%20and%20Registry%20Run%20Key%20Persistence%20Detection/README.md)
+- [T1543.003 - Windows Service Persistence Detection T1543.003](https://github.com/Aleksander9191/Elastic-Detection-Lab/blob/main/techniques/T1543.003%20Windows%20Service%20Persistence%20Detection/README.md)
 
