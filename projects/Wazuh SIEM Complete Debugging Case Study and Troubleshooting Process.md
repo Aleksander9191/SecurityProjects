@@ -1,3 +1,7 @@
+github issue:
+[here](https://github.com/wazuh/wazuh/issues/37589)
+
+
 ## 1. Verifying that Sysmon events are archived
 
 
