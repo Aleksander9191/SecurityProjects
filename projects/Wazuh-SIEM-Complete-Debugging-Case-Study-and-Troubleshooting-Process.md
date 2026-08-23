@@ -8,7 +8,7 @@ github issue:
 
 Verified that the original Sysmon Process Create event containing net1.exe was successfully stored in archives.json. This confirmed that the Windows agent, Sysmon and log collection pipeline were functioning correctly before troubleshooting the detection rule.
 
-![1](../screenshots/1,.png)
+![1](images/Wazuh SIEM Complete Debugging/1,.png)
 
 ## 2. Confirming that the built-in parent rule is triggered
 
