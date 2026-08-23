@@ -164,7 +164,7 @@ For the future I will always keep local_rules.xml clean from  unused example rul
 
 Moreover, the story didn't end here, as it turned out it was only a begining of a debugging story, complete is over here:
 
-[Technical Case Study](https://github.com/Aleksander9191/Wazuh-detection-Rules/blob/master/documents/debugging-custom-wazuh-rule.md)
+[Technical Case Study](https://github.com/Aleksander9191/SecurityProjects/blob/main/projects/Wazuh%20SIEM%20Complete%20Debugging%20Case%20Study%20and%20Troubleshooting%20Process.md)
 
 and in github issue:
 [here](https://github.com/wazuh/wazuh/issues/37589)
