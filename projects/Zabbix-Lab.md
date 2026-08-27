@@ -1,3 +1,9 @@
+---
+layout: default
+title: Basic Configuration and Monitoring with Zabbix
+permalink: /projects/Zabbix-Lab/
+---
+
 #  Monitoring Lab with Zabbix
 
 ## Overview
