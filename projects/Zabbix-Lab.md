@@ -1,4 +1,4 @@
-# Windows 10 Monitoring Lab with Zabbix
+#  Monitoring Lab with Zabbix
 
 ## Overview
 
