@@ -20,7 +20,7 @@ The goal of the lab was to monitor a Windows 10 workstation, collect system perf
 The project was intentionally kept small and focused on demonstrating the core capabilities of Zabbix rather than building a complete enterprise monitoring environment.
 After setting up zabbix on a server and installing agents on workstations I proceeded to test Zabbix features
 
-![1](../images/start.png)
+![1](../images/Zabbix-Lab/start.png)
 
 ---
 
@@ -44,7 +44,7 @@ Windows: "Spooler" (Print Spooler) is not running
 
 After the service remained stopped for the required number of checks, Zabbix generated a problem event.
 
-![1](../images/spooler-problem.png)
+![1](../images/Zabbix-Lab/spooler-problem.png)
 
 The service was then started again and the problem automatically recovered.
 
@@ -96,7 +96,7 @@ Zabbix detected the condition and generated:
 Windows: 0 C: Disk is overloaded
 ```
 
-![1](../images/diskc-full.png)
+![1](../images/Zabbix-Lab/diskc-full.png)
 
 This demonstrated that Zabbix can detect abnormal resource utilization caused by an actual workload rather than simply displaying historical data.
 
@@ -116,7 +116,7 @@ avg(/Win10_1/vm.memory.util,1m)>50
 
 
 
-![1](../images/memory-trigger.png)
+![1](../images/Zabbix-Lab/memory-trigger.png)
 
 
 the test was performed using the command
@@ -128,7 +128,7 @@ the test was performed using the command
 It creates four background jobs, each of which performs an infinite loop to calculate the square root of 123456789. 
 This is a simple way to generate constant CPU load for monitoring tests.
 
-![1](../images/4jobs.png)
+![1](../images/Zabbix-Lab/4jobs.png)
 
 The test demonstrated how Zabbix can distinguish between a short-lived spike and sustained resource exhaustion.
 
@@ -148,7 +148,7 @@ This allows Zabbix to act not only as a performance monitoring system, but also 
 
 A Zabbix item was created to collect failed Windows logon events.
 
-![1](../images/failed-logon-item.png)
+![1](../images/Zabbix-Lab/failed-logon-item.png)
 
 ### Item
 
@@ -190,7 +190,7 @@ Windows generated Event ID:
 
 which represents a failed logon attempt.
 
-![1](../images/failed-logon-event.png)
+![1](../images/Zabbix-Lab/failed-logon-event.png)
 
 Zabbix successfully collected the event and displayed the complete event information, including:
 
@@ -211,7 +211,7 @@ Zabbix generated:
 Multiple failed logon attempts detected
 ```
 
-![1](../images/failed-logon-problem.png)
+![1](../images/Zabbix-Lab/failed-logon-problem.png)
 
 ---
 
@@ -263,7 +263,7 @@ Zabbix generated:
 Security: User account created
 ```
 
-![1](../images/user-account-created.png)
+![1](../images/Zabbix-Lab/user-account-created.png)
 
 This demonstrated how specific Windows security events can be transformed into actionable Zabbix problems.
 
@@ -287,7 +287,7 @@ It contains:
 
 ### Dashboard Preview
 
-![1](../images/dashboard.png)
+![1](../images/Zabbix-Lab/dashboard.png)
 
 ---
 
