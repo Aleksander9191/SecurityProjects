@@ -17,7 +17,7 @@ Technical walkthroughs and case studies documenting real lab implementations fro
 - [Enterprise Active Directory Cybersecurity Lab](/projects/Enterprise-Active-Directory-lab.md)
 - [Wazuh and Active Directory Lab](/projects/Wazuh-and-Active-Directory-Lab.md)
 - [Wazuh SIEM Complete Debugging Case Study and Troubleshooting Process](projects/Wazuh-SIEM-Complete-Debugging-Case-Study-and-Troubleshooting-Process.md)
-- [Basic Configuration and Monitoring with Zabbix](projects/Zabbix-Lab.md)
+- [Basic Configuration and Monitoring with Zabbix](/projects/Zabbix-Lab.md)
 
 ---
 
