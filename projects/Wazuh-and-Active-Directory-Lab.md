@@ -22,7 +22,7 @@ To make thing begin to look like a somewhere real Security Operations Center I i
 
 After a few hours of unexpected error with network interface cards and Virtualbox overall I saw on my monitor what I wanted to see:
 
-![active](SecurityProjects/images/Wazuh-and-Active-Directory-Lab/wazuh-active.png)
+![active](,,/images/Wazuh-and-Active-Directory-Lab/wazuh-active.png)
 
 ![active](../images/Wazuh-and-Active-Directory-Lab/wazuh-agenty3.png)
 
