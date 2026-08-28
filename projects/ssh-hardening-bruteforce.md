@@ -11,7 +11,7 @@ I used ubuntu server on Virtualbox as a target, and Kali linux also on Virtualbo
 
 After basic installation of both machines I configured ssh service and changed default port to `2222`
 
-![SSH Config](../images/ssh-hardening-bruteforce/ssh_config2.png)
+![SSH Config](../images/ssh-hardening-bruteforce/ssh-config2.png)
 
 rule with port didn't apply as `ssh.socket` was running and ignoring my  `sshd_config` change so it had to be turned off
 
