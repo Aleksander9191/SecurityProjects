@@ -49,10 +49,10 @@ The project focuses on simulating real-world MITRE ATT&CK techniques, investigat
 
 ➡️ **[Elastic Detection Lab](https://github.com/Aleksander9191/Elastic-Detection-Lab)**
 
-### Implemented MITRE ATT&CK Techniques
 
-<details>
-<summary><strong>MITRE ATT&CK Techniques (9)</strong></summary>
+
+
+###  Implemented MITRE ATT&CK Techniques 
   
 | Technique | Status |
 |-----------|:------:|
@@ -69,4 +69,4 @@ The project focuses on simulating real-world MITRE ATT&CK techniques, investigat
 | [T1547.001 – Winlogon and Registry Run Key Persistence Detection](https://github.com/Aleksander9191/Elastic-Detection-Lab/blob/main/techniques/T1547.001%20-%20Winlogon%20and%20Registry%20Run%20Key%20Persistence%20Detection/README.md) | ✅ |
 | [T1543.003 – Windows Service Persistence Detection](https://github.com/Aleksander9191/Elastic-Detection-Lab/blob/main/techniques/T1543.003%20Windows%20Service%20Persistence%20Detection/README.md) | ✅ |
 
-</details>
+
