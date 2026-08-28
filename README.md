@@ -5,6 +5,7 @@
 ![Elastic Security](https://img.shields.io/badge/Elastic-Security-005571)
 ![MITRE ATT&CK](https://img.shields.io/badge/MITRE-ATT%26CK-blue)
 ![Sysmon](https://img.shields.io/badge/Sysmon-Enabled-success)
+![Zabbix](https://img.shields.io/badge/Zabbix-Monitoring-CC0000?logo=zabbix&logoColor=white)
 
 A collection of hands-on cybersecurity, detection engineering and system administration projects built to demonstrate practical blue team skills.
 
