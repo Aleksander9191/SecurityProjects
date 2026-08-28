@@ -29,7 +29,7 @@ After a few hours of unexpected error with network interface cards and Virtualbo
 
 Installing Wazuh agents turned out to be more complicated than I could have imagined as all my workstations messed up network cards somehow - it took a while to clean them up
 
-![active](,,/images/Wazuh-and-Active-Directory-Lab/wazuh-agenty3.png)
+![active](/,,/images/Wazuh-and-Active-Directory-Lab/wazuh-agenty3.png)
 
 
 Then I also installed `sysmon` on them
@@ -164,7 +164,7 @@ For the future I will always keep local_rules.xml clean from  unused example rul
 
 Moreover, the story didn't end here, as it turned out it was only a begining of a debugging story, complete is over here:
 
-[Technical Case Study](https://github.com/Aleksander9191/SecurityProjects/blob/main/projects/Wazuh%20SIEM%20Complete%20Debugging%20Case%20Study%20and%20Troubleshooting%20Process.md)
+[Technical Case Study](projects/Wazuh-SIEM-Complete-Debugging-Case-Study-and-Troubleshooting-Process.md)
 
 and in github issue:
 [here](https://github.com/wazuh/wazuh/issues/37589)
