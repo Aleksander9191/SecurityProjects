@@ -51,7 +51,25 @@ Highlights:
 
 ---
 
+## Zabbix Monitoring Lab
 
+Hands-on infrastructure monitoring lab focused on Windows and Linux system monitoring, alerting and troubleshooting.
+
+Highlights:
+
+- Zabbix Server
+- Windows monitoring
+- CPU, memory and disk monitoring
+- Service monitoring
+- Windows Event Log monitoring
+- Custom triggers
+- Network interface monitoring
+- Dashboard creation
+- Troubleshooting automatic updates and stuck systemd jobs
+
+The lab also included an unplanned troubleshooting scenario where an automatic system update became stuck during service restarts, causing MySQL and Zabbix Server to become unavailable. The issue was investigated through `systemctl`, `journalctl`, process trees and systemd job queues before restoring the affected services.
+
+---
 
 ## Elastic Detection Lab
 
