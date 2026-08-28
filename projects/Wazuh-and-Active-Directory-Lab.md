@@ -22,9 +22,9 @@ To make thing begin to look like a somewhere real Security Operations Center I i
 
 After a few hours of unexpected error with network interface cards and Virtualbox overall I saw on my monitor what I wanted to see:
 
-![active](,,/images/Wazuh-and-Active-Directory-Lab/wazuh-active.png)
+![active](SecurityProjects/images/Wazuh-and-Active-Directory-Lab/wazuh-active.png)
 
-![active](,,/images/Wazuh-and-Active-Directory-Lab/wazuh-agenty.png)
+![active](/SecurityProjects/images/Wazuh-and-Active-Directory-Lab/wazuh-agenty.png)
 
 
 Installing Wazuh agents turned out to be more complicated than I could have imagined as all my workstations messed up network cards somehow - it took a while to clean them up
