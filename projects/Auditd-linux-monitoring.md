@@ -14,13 +14,13 @@ The goal is not only to generate Linux audit events, but also to understand how 
 
 ## Lab Architecture
 
-| Layer | Component | Purpose |
-|-------|-----------|---------|
-| **Endpoint** | Ubuntu Server 24.04 LTS | Linux host generating security events. |
-| **Auditing** | auditd | Native Linux Audit Framework responsible for monitoring security-relevant system activity and generating audit logs. |
-| **Log Collection** | Elastic Agent | Collects auditd logs and securely forwards them to Elasticsearch through Fleet. |
-| **Data Storage** | Elasticsearch | Indexes and stores audit events for fast searching and analysis. |
-| **Visualization & Investigation** | Kibana | Provides dashboards, filtering, event investigation, and detection engineering capabilities. |
+| Layer | Component | 
+|-------|-----------|
+| **Endpoint** | Ubuntu Server 24.04 LTS |
+| **Auditing** | auditd |
+| **Log Collection** | Elastic Agent |
+| **Data Storage** | Elasticsearch |
+| **Visualization & Investigation** | Kibana |
 
 
 ---
