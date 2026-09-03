@@ -48,6 +48,7 @@ sudo auditctl -l
 ```
 
 However, querying the audit logs immediately returns events:
+
 ![2](../images/Auditd-linux-monitoring/audit-l.png)
 
 
@@ -160,6 +161,7 @@ sudo ausearch -k passwd_changes
 The output confirmed that the custom audit rule generated several related audit records
 
 These records together describe the complete audited operation.
+
 ![4](../images/Auditd-linux-monitoring/ausearch-etc-passwd.png)
 
 
