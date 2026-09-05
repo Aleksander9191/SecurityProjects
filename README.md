@@ -72,6 +72,25 @@ The lab also included an unplanned troubleshooting scenario where an automatic s
 
 ---
 
+## Linux Security Monitoring with auditd & Elastic
+
+Detection engineering project focused on Linux security monitoring using the native Linux Audit Framework (`auditd`) integrated with the Elastic Stack.
+
+Highlights:
+
+- Linux Audit Framework (`auditd`)
+- Elastic Agent & Fleet
+- Elasticsearch
+- Kibana
+- Detection Engineering
+- Linux Security Monitoring
+- Audit Rule Development
+- Event Validation & Investigation
+
+The project demonstrates how security-relevant Linux events are generated, collected, forwarded to Elastic, and analyzed from a SOC analyst perspective. It includes practical audit rule development, local event validation with `ausearch`, and detailed investigation of audit telemetry within Kibana.
+
+---
+
 ## Elastic Detection Lab
 
 Detection Engineering project using:
