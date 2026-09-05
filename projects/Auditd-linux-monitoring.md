@@ -35,7 +35,7 @@ After installation, the audit service was enabled and verified.
 ![screen](../images/Auditd-linux-monitoring/status.png)
 
 
----
+
 
 ## Default auditd Behavior
 
@@ -58,11 +58,13 @@ The reason is that auditd records several types of events generated internally b
 
 Custom rules are only required when monitoring specific files, directories, system calls, users, or security-sensitive operations.
 
+---
+
 # Rule 1 - Monitoring /etc/passwd
 
 
 
----
+
 
 ## Why monitor this?
 
@@ -72,7 +74,7 @@ Monitoring this file helps detect unauthorized changes that may indicate privile
 
 
 
----
+
 
 ## Audit Rule
 
@@ -80,7 +82,7 @@ Monitoring this file helps detect unauthorized changes that may indicate privile
 -w /etc/passwd -p wa -k passwd_changes
 ```
 
----
+
 
 ## Rule Breakdown
 
@@ -91,7 +93,7 @@ Monitoring this file helps detect unauthorized changes that may indicate privile
 | `-p wa` | Monitor write (`w`) and attribute (`a`) changes | File modification, permission or ownership changes |
 | `-k passwd_changes` | Assign a searchable key to generated events | `ausearch -k passwd_changes` |
 
----
+
 
 ## Why these permissions?
 
@@ -100,7 +102,7 @@ Monitoring this file helps detect unauthorized changes that may indicate privile
 | **w** | Write operations | Detects modifications to the monitored file |
 | **a** | Attribute changes | Detects permission, ownership or metadata changes |
 
----
+
 
 ## Creating the Rule
 
@@ -140,7 +142,7 @@ sudo nano /etc/passwd
 
 Saving the file generated multiple audit events associated with the custom rule.
 
----
+
 
 ## Local Verification
 
@@ -204,7 +206,7 @@ The generated event provides detailed forensic information describing the monito
 | `auditd.log.AUID` | `user1` | Original authenticated user |
 | `auditd.log.UID` | `root` | Effective user executing the operation through `sudo` |
 
----
+
 
 ## Understanding AUID vs UID
 
@@ -267,7 +269,8 @@ The following rule monitors write (`w`) and attribute (`a`) changes to `/etc/sha
 | `-p wa`             | Monitor write (`w`) and attribute (`a`) changes | File modification, permission or ownership changes |
 | `-k passwd_changes` | Assign a searchable key to generated events     | `ausearch -k passwd_changes`                       |
 
----
+
+
 
 ## Triggering the Rule
 
@@ -279,7 +282,8 @@ sudo nano /etc/shadow
 
 A blank line was inserted and saved to generate a legitimate filesystem write event.
 
----
+
+
 
 ## Local Verification
 
@@ -293,9 +297,10 @@ Expected output:
 
 ![32](../images/Auditd-linux-monitoring/ausearch-etc-shadow.png)
 
----
 
-### Event Breakdown
+
+
+## Event Breakdown
 
 | Highlight                   | Description                                                                |
 | --------------------------- | -------------------------------------------------------------------------- |
@@ -346,7 +351,7 @@ After ingestion, the event becomes searchable inside Kibana Discover.
 | `AUID` | Original authenticated user who initiated the action (`user1`). |
 | `tty` | Interactive terminal used to perform the action (`pts0`). |
 
----
+
 
 ## Event  Analysis
 
@@ -373,7 +378,7 @@ The event provides valuable forensic context.
 The `/etc/sudoers` file controls which users and groups are permitted to execute commands with elevated privileges using `sudo`. Because it directly governs administrative access, unauthorized modifications can be used to establish privilege escalation, persistence, or evade security controls.
 
 
----
+
 
 
 
@@ -384,7 +389,7 @@ The `/etc/sudoers` file controls which users and groups are permitted to execute
 ```
 
 
----
+
 
 ## Triggering the rule
 
@@ -396,7 +401,7 @@ sudo visudo
 
 Again a blank line was inserted and saved to generate a legitimate filesystem write event.
 
----
+
 
 ## Event Validation
 
@@ -406,11 +411,11 @@ The generated audit event was verified using:
 sudo ausearch -k sudoers_changes
 ```
 
-### Event Breakdown
+## Event Breakdown
 
 ![12](../images/Auditd-linux-monitoring/ausearch-etc-sudoers.png)
 
-### Highlighted Fields
+
 
 | Highlight                           | Description                                                                    |
 | ----------------------------------- | ------------------------------------------------------------------------------ |
@@ -445,7 +450,7 @@ This approach prevents corruption of the sudoers configuration and is considered
 ---
 
 
-# Rule 4 – Monitoring `sudo` Command Execution
+# Rule 4 – Monitoring sudo Command Execution
 
 ## Why Monitor This?
 
@@ -453,7 +458,7 @@ The `sudo` command allows authorized users to execute commands with elevated pri
 
 Capturing `sudo` executions helps security analysts identify administrative actions, investigate suspicious behavior, and correlate privileged command execution with other security events.
 
----
+
 
 ## Audit Rule
 
@@ -471,7 +476,7 @@ Capturing `sudo` executions helps security analysts identify administrative acti
 | `-F exe=/usr/bin/sudo` | Restrict the rule to executions of the `sudo` binary only. |
 | `-F key=sudo_execution` | Assign a custom identifier that simplifies searching and filtering related events. |
 
----
+
 
 ## Triggering the Rule
 
@@ -487,11 +492,11 @@ Executing any command through `sudo` generates an `EXECVE` event, which is colle
 
 
 
-### Event Breakdown
+## Event Breakdown
 
 ![321](../images/Auditd-linux-monitoring/ausearch-sudo-exec.png)
 
-### Highlighted Fields
+
 
 | Highlight | Description |
 |-----------|-------------|
