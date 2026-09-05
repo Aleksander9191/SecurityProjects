@@ -115,3 +115,19 @@ h2 {
 h3 {
     color: #3FB950;
 }
+
+.back-link {
+    margin-bottom: 35px;
+    font-size: 18px;
+}
+
+.back-link a {
+    color: #7EE787;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.back-link a:hover {
+    color: #56D364;
+    text-decoration: underline;
+}
