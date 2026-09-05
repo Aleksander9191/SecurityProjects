@@ -58,7 +58,7 @@ The reason is that auditd records several types of events generated internally b
 
 Custom rules are only required when monitoring specific files, directories, system calls, users, or security-sensitive operations.
 
-# Rule 1 - Monitoring `/etc/passwd`
+# Rule 1 - Monitoring /etc/passwd
 
 ## Detection Overview
 
