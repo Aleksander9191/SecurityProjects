@@ -43,9 +43,11 @@
         </div>
 
         
+{% if page.path contains 'projects/' %}
 <p class="back-link">
     ← <a href="{{ '/' | relative_url }}">Back to Portfolio</a>
 </p>
+{% endif %}
 
       
         {{ content }}
