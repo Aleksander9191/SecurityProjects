@@ -1,3 +1,4 @@
 title: Cybersecurity Portfolio
 description: to showcase my practical skills to my future employers.
 theme: jekyll-theme-midnight
+baseurl: "/SecurityProjects"
