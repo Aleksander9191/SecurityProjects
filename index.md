@@ -19,7 +19,11 @@ Technical walkthroughs and case studies documenting real lab implementations fro
 - [Wazuh SIEM Complete Debugging Case Study and Troubleshooting Process](projects/Wazuh-SIEM-Complete-Debugging-Case-Study-and-Troubleshooting-Process.md)
 - [Basic Configuration and Monitoring with Zabbix](/projects/Zabbix-Lab.md)
 - [Linux Security Monitoring with Auditd & Elastic part 1](/projects/Auditd-linux-monitoring.md)
+
+
 ---
+
+
 
 # 🛡️ Elastic Detection Lab
 
