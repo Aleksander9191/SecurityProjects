@@ -198,7 +198,7 @@ This behavior could not be reproduced by syntax validation and appears to indica
 
 After exhausting all local troubleshooting steps, the findings were documented and submitted as a GitHub issue to the official Wazuh repository here:
 
-https://github.com/wazuh/wazuh/issues/37589
+[issue](https://github.com/wazuh/wazuh/issues/37589)
 
 
 The report included:
