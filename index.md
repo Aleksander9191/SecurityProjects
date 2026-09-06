@@ -66,7 +66,7 @@ The project focuses on simulating real-world MITRE ATT&CK techniques, investigat
 | [T1218.010 – Regsvr32 Scriptlet Execution](https://github.com/Aleksander9191/Elastic-Detection-Lab/blob/main/techniques/T1218.010%20-%20Regsvr32%20Scriptlet%20Execution/README.md) | ✅ |
 | [T1105 – Ingress Tool Transfer](https://github.com/Aleksander9191/Elastic-Detection-Lab/blob/main/techniques/T1105%20-%20Ingress%20Tool%20Transfer/README.md) | ✅ |
 | [T1685.005 – Clear Windows Event Logs](https://github.com/Aleksander9191/Elastic-Detection-Lab/blob/main/techniques/T1685.005%20-%20Disable%20or%20Modify%20Tools%3A%20Clear%20Windows%20Event%20Logs/README.md) | ✅ |
-| [T1003.001 – LSASS Memory Dump](./T1003.001-LSASS-Memory-Dump/README.md) | ✅ |
+| [T1003.001 – LSASS Memory Dump](https://github.com/Aleksander9191/Elastic-Detection-Lab/tree/736bf625482f8aec1f14f919a29ced6a6cef39a2/techniques/T1003.001%20%E2%80%93%20LSASS%20Memory%20Dump%20via%20Comsvcs.dll) | ✅ |
 | [T1027 – PowerShell Character Array Obfuscation](https://github.com/Aleksander9191/Elastic-Detection-Lab/blob/main/techniques/T1027%20-%20PowerShell%20Character%20Array%20Obfuscation/README.md) | ✅ |
 | [T1564.001 – Hidden Files and Directories](https://github.com/Aleksander9191/Elastic-Detection-Lab/blob/main/techniques/T1564.001%20%E2%80%93%20Hide%20Artifacts%3A%20Hidden%20Files%20and%20Directories/README.md) | ✅ |
 | [T1053.005 – Scheduled Task](https://github.com/Aleksander9191/Elastic-Detection-Lab/blob/main/techniques/T1053.005%20-%20Scheduled%20Task/README.md) | ✅ |
