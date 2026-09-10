@@ -68,7 +68,7 @@ The generated audit events were verified directly from the Linux audit subsystem
 sudo ausearch -k ssh_config_changes
 ```
 
-![screen](../images/Auditd-linux-monitoring/ausearch-etc-sshconfig.png)
+![screen](../images/Auditd-linux-monitoring/ausearch-ssh.png)
 
 
 ## Event Breakdown
