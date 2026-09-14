@@ -82,8 +82,8 @@ The project focuses on simulating real-world MITRE ATT&CK techniques, investigat
 <table>
 
 <tr>
-<td width="90">
-<img src="images/certs/Security+-png.png" width="70">
+<td width="100">
+<img src="images/certs/Security+-png.png" width="90">
 </td>
 
 <td>
@@ -97,8 +97,8 @@ View Credential
 </tr>
 
 <tr>
-<td width="90">
-<img src="images/certs/sal1.png" width="70">
+<td width="100">
+<img src="images/certs/sal1.png" width="90">
 </td>
 
 <td>
@@ -108,10 +108,6 @@ View Credential
 View Credential
 </a>
 
-</td>
-</tr>
-
-</table>
 
 
 
