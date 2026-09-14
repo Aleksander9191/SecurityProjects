@@ -82,7 +82,7 @@ The project focuses on simulating real-world MITRE ATT&CK techniques, investigat
 <table>
 <tr>
 <td width="90">
-<img src="images/certs/cSecurity+-png.png" width="70">
+<img src="images/certs/Security+-png.png" width="70">
 </td>
 <td>
 
@@ -101,7 +101,7 @@ The project focuses on simulating real-world MITRE ATT&CK techniques, investigat
 
 **Security Analyst Level 1 (SAL1)**
 
-🔗 [View Credential]([https://www.credly.com/...](https://www.credly.com/badges/e5903514-e32a-477e-9fed-b402154f2c90))
+🔗 [View Credential]((https://www.credly.com/badges/e5903514-e32a-477e-9fed-b402154f2c90))
 
 </td>
 </tr>
