@@ -80,15 +80,18 @@ The project focuses on simulating real-world MITRE ATT&CK techniques, investigat
 ## 📜 Certifications
 
 <table>
+
 <tr>
 <td width="90">
 <img src="images/certs/Security+-png.png" width="70">
 </td>
+
 <td>
+<strong>CompTIA Security+ (SY0-701)</strong><br><br>
 
-**CompTIA Security+ (SY0-701)**
-
-🔗 [View Credential](https://www.credly.com/badges/3f279739-89ce-4ce1-8313-e6e7fc897c92/linked_in?t=t1n9fg)
+🔗 <a href="https://www.credly.com/badges/3f279739-89ce-4ce1-8313-e6e7fc897c92/linked_in?t=t1n9fg">
+View Credential
+</a>
 
 </td>
 </tr>
@@ -97,14 +100,18 @@ The project focuses on simulating real-world MITRE ATT&CK techniques, investigat
 <td width="90">
 <img src="images/certs/sal1.png" width="70">
 </td>
+
 <td>
+<strong>Security Analyst Level 1 (SAL1)</strong><br><br>
 
-**Security Analyst Level 1 (SAL1)**
-
-🔗 [View Credential](https://www.credly.com/badges/e5903514-e32a-477e-9fed-b402154f2c90)
+🔗 <a href="https://www.credly.com/badges/e5903514-e32a-477e-9fed-b402154f2c90">
+View Credential
+</a>
 
 </td>
 </tr>
+
+</table>
 
 
 
