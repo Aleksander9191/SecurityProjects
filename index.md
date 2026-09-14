@@ -77,4 +77,39 @@ The project focuses on simulating real-world MITRE ATT&CK techniques, investigat
 | [T1543.003 – Windows Service Persistence Detection](https://github.com/Aleksander9191/Elastic-Detection-Lab/blob/main/techniques/T1543.003%20Windows%20Service%20Persistence%20Detection/README.md) | ✅ |
 
 
+## 📜 Certifications
+
+<table>
+<tr>
+<td width="90">
+<img src="images/certs/cSecurity+-png.png" width="70">
+</td>
+<td>
+
+**CompTIA Security+ (SY0-701)**
+
+🔗 [View Credential](https://www.credly.com/badges/3f279739-89ce-4ce1-8313-e6e7fc897c92/linked_in?t=t1n9fg)
+
+</td>
+</tr>
+
+<tr>
+<td width="90">
+<img src="images/certs/sal1.png" width="70">
+</td>
+<td>
+
+**Security Analyst Level 1 (SAL1)**
+
+🔗 [View Credential]([https://www.credly.com/...](https://www.credly.com/badges/e5903514-e32a-477e-9fed-b402154f2c90))
+
+</td>
+</tr>
+
+
+
+
+</td>
+</tr>
+</table>
 
