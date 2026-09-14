@@ -33,8 +33,6 @@ Detection Engineering portfolio built with **Elastic Security**, **Sysmon**, and
 The project focuses on simulating real-world MITRE ATT&CK techniques, investigating generated telemetry, validating built-in Elastic detections, and developing custom detection rules.
 
 
-<details>
-<summary><strong>Show project details</strong></summary>
   
 ### Highlights
 
@@ -42,7 +40,7 @@ The project focuses on simulating real-world MITRE ATT&CK techniques, investigat
 - ✅ 30+ custom Elastic detection rules
 - ✅ Sysmon telemetry investigation
 - ✅ Elastic Security alert validation
-- ✅ Detailed documentation for every technique
+
 
 ### Technologies
 
@@ -78,5 +76,5 @@ The project focuses on simulating real-world MITRE ATT&CK techniques, investigat
 | [T1547.001 – Winlogon and Registry Run Key Persistence Detection](https://github.com/Aleksander9191/Elastic-Detection-Lab/blob/main/techniques/T1547.001%20-%20Winlogon%20and%20Registry%20Run%20Key%20Persistence%20Detection/README.md) | ✅ |
 | [T1543.003 – Windows Service Persistence Detection](https://github.com/Aleksander9191/Elastic-Detection-Lab/blob/main/techniques/T1543.003%20Windows%20Service%20Persistence%20Detection/README.md) | ✅ |
 
-</details>
+
 
