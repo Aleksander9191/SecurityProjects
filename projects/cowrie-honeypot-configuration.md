@@ -122,7 +122,7 @@ sudo ufw allow 22/tcp
 sudo ufw allow 23/tcp
 sudo ufw allow 2222/tcp
 ```
-![screen](../images/images/cowrie-config/ufw.png)
+![screen](../images/cowrie-config/ufw.png)
 
 The rules apply to both IPv4 and IPv6.
 
@@ -218,7 +218,7 @@ uname -a
 whoami
 exit
 ```
-![screen](../images/images/cowrie-config/telnet.png)
+![screen](../images/cowrie-config/telnet.png)
 
 Cowrie recorded the corresponding authentication, command input, and session termination events.
 
