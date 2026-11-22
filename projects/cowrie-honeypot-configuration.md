@@ -306,24 +306,14 @@ sudo apt install geoipupdate mmdb-bin python3-maxminddb
 
 The MaxMind configuration was stored in `/etc/GeoIP.conf`:
 
-```ini
+```
 AccountID YOUR_ACCOUNT_ID
 LicenseKey YOUR_LICENSE_KEY
 EditionIDs GeoLite2-City GeoLite2-ASN
 DatabaseDirectory /usr/share/GeoIP
 ```
 
-The databases were downloaded and updated using:
 
-```bash
-sudo geoipupdate
-```
-
-The downloaded database files were verified:
-
-```bash
-ls -lh /usr/share/GeoIP/
-```
 
 ### IP Enrichment
 
