@@ -287,30 +287,82 @@ Cowrie recorded all five download events as `cowrie.session.file_download.failed
 
 ---
 
-## Summary
+## GeoIP & ASN Enrichment
 
-In this initial phase, I deployed Cowrie on a Debian 13 VPS and configured both SSH and Telnet honeypot services.
+To enrich the collected telemetry with network and geographical context, **MaxMind GeoLite2** databases were integrated into the analysis workflow.
 
-The deployment includes:
+### GeoLite2 Configuration
 
-- Dedicated unprivileged service account.
-    
-- Isolated Python environment.
-    
-- systemd service management.
-    
-- SSH and Telnet listeners.
-    
-- UFW firewall configuration.
-    
-- nftables outbound connection restrictions.
-    
-- JSON-based event collection.
-    
-- External connectivity and session validation.
-    
+A free MaxMind GeoLite account was used to obtain the following databases:
 
-The next phase will focus on extending the honeypot infrastructure with additional exposed services and developing custom tools for telemetry analysis, threat investigation, and visualization.
+- `GeoLite2-City` – IP geolocation data.
+- `GeoLite2-ASN` – Autonomous System Number and network organization information.
+
+The GeoIP Update utility and supporting tools were installed:
+
+```bash
+sudo apt install geoipupdate mmdb-bin python3-maxminddb
+```
+
+The MaxMind configuration was stored in `/etc/GeoIP.conf`:
+
+```ini
+AccountID YOUR_ACCOUNT_ID
+LicenseKey YOUR_LICENSE_KEY
+EditionIDs GeoLite2-City GeoLite2-ASN
+DatabaseDirectory /usr/share/GeoIP
+```
+
+The databases were downloaded and updated using:
+
+```bash
+sudo geoipupdate
+```
+
+The downloaded database files were verified:
+
+```bash
+ls -lh /usr/share/GeoIP/
+```
+
+### IP Enrichment
+
+A Python-based enrichment script was developed using the `maxminddb` library to retrieve geolocation and ASN information for source IP addresses recorded by Cowrie.
+
+The script processes connection events and generates CSV reports containing source IP addresses, connection counts, countries, ASNs, and network organization names.
+
+The analysis was performed separately for both exposed services.
+
+**Telnet – TCP port 23:**
+
+```bash
+sudo python3 geoip_enrichment.py \
+  --input /opt/cowrie/var/log/cowrie/cowrie.json.2026-11-18 \
+  --protocol telnet \
+  --port 23
+```
+![screen](../images/cowrie-config/telnet-asn.png)
+
+
+
+**SSH – TCP port 2222:**
+
+```bash
+sudo python3 geoip_enrichment.py \
+  --input /opt/cowrie/var/log/cowrie/cowrie.json.2026-11-18 \
+  --protocol ssh \
+  --port 2222
+```
+
+![screen](../images/cowrie-config/ssh-asn.png)
+
+The script generates the following reports for each protocol:
+
+- `*_geoip.csv` – enriched source IP data.
+- `*_by_country.csv` – connection statistics grouped by country.
+- `*_by_asn.csv` – connection statistics grouped by ASN and network organization.
+
+GeoIP information is approximate and should not be treated as proof of an attacker's physical location. ASN data identifies the network organization associated with an IP address, not the individual responsible for the activity.
 
 ---
 
@@ -325,8 +377,6 @@ Planned extensions:
 - ICS/OT honeypot (Modbus TCP).
     
 - Python-based Cowrie log analyzer.
-    
-- Attack source GeoIP and ASN enrichment.
     
 - Threat Intelligence integration.
     
