@@ -43,11 +43,6 @@ The existing Cowrie deployment remains unchanged. OpenCanary introduces two addi
 
 ### Service Separation
 
-OpenCanary was installed in a dedicated directory:
-
-```
-/opt/opencanary
-```
 
 A separate Python virtual environment was created to isolate its dependencies from both Cowrie and the system Python installation.
 
@@ -128,7 +123,7 @@ Relevant configuration options in `opencanary.conf`:
 "ftp.enabled": false
 ```
 
-FTP and other unused modules remain disabled.
+FTP and other unused modules remain disabled for now.
 
 ---
 
@@ -208,19 +203,7 @@ Start OpenCanary:
 sudo systemctl start opencanary
 ```
 
-Enable automatic startup:
 
-```
-sudo systemctl enable opencanary
-```
-
-Check service status:
-
-```
-sudo systemctl status opencanary
-```
-
----
 
 ## Network Security Configuration
 
@@ -237,11 +220,7 @@ The firewall retains the existing default-deny incoming policy.
 
 The rules apply to both IPv4 and IPv6.
 
-### Service Isolation
 
-OpenCanary operates under a separate Linux account and Python environment.
-
-This provides separation from the existing Cowrie service and prevents OpenCanary from requiring root privileges to operate.
 
 ---
 
@@ -328,19 +307,6 @@ HTTP and HTTPS events may contain:
 - Configured honeypot skin.
     
 
-### Live Log Monitoring
-
-The log can be monitored in real time using:
-
-```
-sudo tail -f /var/log/opencanary/opencanary.log
-```
-
-Service logs can also be inspected through systemd:
-
-```
-sudo journalctl -u opencanary -f
-```
 
 ### HTTP GET Validation
 
@@ -386,20 +352,7 @@ The tests confirmed that both services were operational and that incoming reques
 
 ---
 
-## Integration with the Existing Honeypot Project
 
-OpenCanary extends the existing Cowrie deployment without replacing or modifying its SSH and Telnet services.
-
-The current infrastructure now provides four exposed honeypot services:
-
-- SSH – TCP 2222 (Cowrie).
-    
-- Telnet – TCP 23 (Cowrie).
-    
-- HTTP – TCP 80 (OpenCanary).
-    
-- HTTPS – TCP 443 (OpenCanary).
-    
 
 The next development step is to integrate OpenCanary telemetry into the existing Python-based analysis workflow.
 
