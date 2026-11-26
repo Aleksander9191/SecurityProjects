@@ -20,7 +20,8 @@ Technical walkthroughs and case studies documenting real lab implementations fro
 - [Basic Configuration and Monitoring with Zabbix](/projects/Zabbix-Lab.md)
 - [Linux Security Monitoring with Auditd & Elastic part 1](/projects/Auditd-linux-monitoring.md)
 - [Linux Security Monitoring with Auditd & Elastic part 2](/projects/Auditd-linux-monitoring2.md)
-- [Cowrie Honeypot Configuration](/projects/cowrie-honeypot-configuration.md)
+- [Cowrie Honeypot Configuration part 1](/projects/cowrie-honeypot-configuration.md)
+- [OpenCanary Honeypot Configuration part 2](/projects/opencanary-honeypot-configuration.md)
 
 ---
 
